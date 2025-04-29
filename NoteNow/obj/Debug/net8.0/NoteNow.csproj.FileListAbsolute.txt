@@ -12,3 +12,4 @@ D:\NoteNow\NoteNow\obj\Debug\net8.0\refint\NoteNow.dll
 D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.pdb
 D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.genruntimeconfig.cache
 D:\NoteNow\NoteNow\obj\Debug\net8.0\ref\NoteNow.dll
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.sourcelink.json
