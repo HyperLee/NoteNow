@@ -1,0 +1,14 @@
+D:\NoteNow\NoteNow\bin\Debug\net8.0\NoteNow.exe
+D:\NoteNow\NoteNow\bin\Debug\net8.0\NoteNow.deps.json
+D:\NoteNow\NoteNow\bin\Debug\net8.0\NoteNow.runtimeconfig.json
+D:\NoteNow\NoteNow\bin\Debug\net8.0\NoteNow.dll
+D:\NoteNow\NoteNow\bin\Debug\net8.0\NoteNow.pdb
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.GeneratedMSBuildEditorConfig.editorconfig
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.AssemblyInfoInputs.cache
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.AssemblyInfo.cs
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.csproj.CoreCompileInputs.cache
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.dll
+D:\NoteNow\NoteNow\obj\Debug\net8.0\refint\NoteNow.dll
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.pdb
+D:\NoteNow\NoteNow\obj\Debug\net8.0\NoteNow.genruntimeconfig.cache
+D:\NoteNow\NoteNow\obj\Debug\net8.0\ref\NoteNow.dll
