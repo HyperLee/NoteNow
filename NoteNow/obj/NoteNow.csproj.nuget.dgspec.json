@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NoteNow\\NoteNow\\NoteNow.csproj": {}
+    "/Users/qiuzili/NoteNow/NoteNow/NoteNow/NoteNow.csproj": {}
   },
   "projects": {
-    "D:\\NoteNow\\NoteNow\\NoteNow.csproj": {
+    "/Users/qiuzili/NoteNow/NoteNow/NoteNow/NoteNow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NoteNow\\NoteNow\\NoteNow.csproj",
+        "projectUniqueName": "/Users/qiuzili/NoteNow/NoteNow/NoteNow/NoteNow.csproj",
         "projectName": "NoteNow",
-        "projectPath": "D:\\NoteNow\\NoteNow\\NoteNow.csproj",
-        "packagesPath": "C:\\Users\\A6005\\.nuget\\packages\\",
-        "outputPath": "D:\\NoteNow\\NoteNow\\obj\\",
+        "projectPath": "/Users/qiuzili/NoteNow/NoteNow/NoteNow/NoteNow.csproj",
+        "packagesPath": "/Users/qiuzili/.nuget/packages/",
+        "outputPath": "/Users/qiuzili/NoteNow/NoteNow/NoteNow/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\A6005\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/qiuzili/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
