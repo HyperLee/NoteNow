@@ -27,6 +27,8 @@ class Program
     {
         var solution = new Program();
 
+        Console.WriteLine("=== 解法一：雜湊表方法 ===");
+        
         // 測試案例 1: [1,3,2,2,5,2,3,7]
         int[] nums1 = { 1, 3, 2, 2, 5, 2, 3, 7 };
         int result1 = solution.FindLHS(nums1);
@@ -53,11 +55,41 @@ class Program
         int result4 = solution.FindLHS(nums4);
         Console.WriteLine($"測試案例 4: [{string.Join(",", nums4)}]");
         Console.WriteLine($"結果: {result4}");
-        Console.WriteLine($"說明: 包含重複元素的更複雜案例");
+        Console.WriteLine($"說明: 包含重複元素的更複雜案例\n");
+
+        Console.WriteLine("=== 解法二：暴力法 ===");
+        
+        // 使用相同的測試案例測試解法二
+        int result1_2 = solution.FindLHS2(nums1);
+        Console.WriteLine($"測試案例 1: [{string.Join(",", nums1)}]");
+        Console.WriteLine($"結果: {result1_2}");
+        Console.WriteLine($"說明: 最長和諧子序列是 [3,2,2,2,3]，長度為 5\n");
+
+        int result2_2 = solution.FindLHS2(nums2);
+        Console.WriteLine($"測試案例 2: [{string.Join(",", nums2)}]");
+        Console.WriteLine($"結果: {result2_2}");
+        Console.WriteLine($"說明: 有多個長度為 2 的和諧子序列，如 [1,2]、[2,3]、[3,4]\n");
+
+        int result3_2 = solution.FindLHS2(nums3);
+        Console.WriteLine($"測試案例 3: [{string.Join(",", nums3)}]");
+        Console.WriteLine($"結果: {result3_2}");
+        Console.WriteLine($"說明: 所有元素相同，無法形成和諧子序列\n");
+
+        int result4_2 = solution.FindLHS2(nums4);
+        Console.WriteLine($"測試案例 4: [{string.Join(",", nums4)}]");
+        Console.WriteLine($"結果: {result4_2}");
+        Console.WriteLine($"說明: 包含重複元素的更複雜案例\n");
+
+        // 驗證兩種解法的結果是否一致
+        Console.WriteLine("=== 結果驗證 ===");
+        Console.WriteLine($"測試案例 1: 解法一={result1}, 解法二={result1_2}, 一致={result1 == result1_2}");
+        Console.WriteLine($"測試案例 2: 解法一={result2}, 解法二={result2_2}, 一致={result2 == result2_2}");
+        Console.WriteLine($"測試案例 3: 解法一={result3}, 解法二={result3_2}, 一致={result3 == result3_2}");
+        Console.WriteLine($"測試案例 4: 解法一={result4}, 解法二={result4_2}, 一致={result4 == result4_2}");
     }
 
     /// <summary>
-    /// 尋找最長和諧子序列的長度
+    /// 解法一：尋找最長和諧子序列的長度 (使用雜湊表)
     /// 
     /// 解題說明：
     /// 和諧子序列定義：子序列中最大值和最小值的差恰好等於1
@@ -117,6 +149,73 @@ class Program
         }
 
         // 返回最長和諧子序列的長度
+        return maxLength;
+    }
+
+    /// <summary>
+    /// 解法二：尋找最長和諧子序列的長度 (使用暴力法)
+    /// 
+    /// 解題說明：
+    /// 和諧子序列定義：子序列中最大值和最小值的差恰好等於1
+    /// 
+    /// 核心概念：
+    /// 對每個數字 x，掃描整個陣列統計 x 和 x+1 的出現次數
+    /// 計算所有可能的和諧子序列長度
+    /// 
+    /// 演算法步驟：
+    /// 1. 遍歷陣列中的每個數字 x
+    /// 2. 對於每個 x，再次遍歷整個陣列
+    /// 3. 統計 x 和 x+1 的出現次數  
+    /// 4. 如果 x+1 存在，計算和諧子序列長度
+    /// 5. 回傳所有組合中的最大長度
+    /// 
+    /// 時間複雜度：O(n²) - 對每個元素都要掃描整個陣列
+    /// 空間複雜度：O(1) - 只使用固定的額外空間
+    /// </summary>
+    /// <param name="nums">輸入的整數數組</param>
+    /// <returns>最長和諧子序列的長度，如果不存在則返回0</returns>
+    public int FindLHS2(int[] nums)
+    {
+        var maxLength = 0;
+        var processedNumbers = new HashSet<int>();
+        
+        // 遍歷陣列中的每個數字
+        for (int i = 0; i < nums.Length; i++)
+        {
+            var currentNum = nums[i];
+            
+            // 避免重複處理相同的數字，提高效率
+            if (processedNumbers.Contains(currentNum))
+            {
+                continue;
+            }
+            processedNumbers.Add(currentNum);
+            
+            // 統計當前數字和比它大1的數字的出現次數
+            var countCurrent = 0;
+            var countNext = 0;
+            
+            // 掃描整個陣列統計 currentNum 和 currentNum+1 的出現次數
+            for (int j = 0; j < nums.Length; j++)
+            {
+                if (nums[j] == currentNum)
+                {
+                    countCurrent++;
+                }
+                else if (nums[j] == currentNum + 1)
+                {
+                    countNext++;
+                }
+            }
+            
+            // 如果 currentNum+1 存在（countNext > 0），則可以形成和諧子序列
+            if (countNext > 0)
+            {
+                var currentLength = countCurrent + countNext;
+                maxLength = Math.Max(maxLength, currentLength);
+            }
+        }
+        
         return maxLength;
     }
 
