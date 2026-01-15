@@ -5,7 +5,7 @@
             "name": "Launch .NET Core App",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/NoteNow/bin/Debug/net8.0/NoteNow.dll",
+            "program": "${workspaceFolder}/NoteNow/bin/Debug/net10.0/NoteNow.dll",
             "args": [],
             "cwd": "${workspaceFolder}/NoteNow",
             "console": "internalConsole",
